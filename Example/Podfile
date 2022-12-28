@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'SMLIJKPlayer_Example' do
+  pod 'SMLIJKPlayer', :path => '../'
+
+  target 'SMLIJKPlayer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
