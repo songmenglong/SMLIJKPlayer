@@ -18,6 +18,15 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SMLIJKPlayer'
+
+pod lib lint --verbose --allow-warnings --no-clean
+
+pod spec lint --sources='https://github.com/songmenglong/SMLSpec.git,https://github.com/CocoaPods/Specs.git' --allow-warnings
+
+pod repo add SMLSpec https://github.com/songmenglong/SMLSpec.git
+
+pod repo push SMLSpec SMLIJKPlayer.podspec --allow-warnings
+ 
 ```
 
 ## Author

@@ -15,6 +15,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A29769C5295C30590053A18D /* NameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29769C4295C30590053A18D /* NameViewController.m */; };
+		A29769CA295C43260053A18D /* IJKMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29769C7295C43260053A18D /* IJKMoviePlayerViewController.m */; };
+		A29769CB295C43260053A18D /* IJKMoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29769C8295C43260053A18D /* IJKMoviePlayerViewController.xib */; };
+		A29769CE295C43520053A18D /* IJKMediaControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A29769CC295C43510053A18D /* IJKMediaControl.m */; };
+		A29769D5295C460D0053A18D /* FunctionListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29769D4295C460D0053A18D /* FunctionListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		1AF62C023660447826D7E1E6 /* Pods-SMLIJKPlayer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLIJKPlayer_Example.debug.xcconfig"; path = "Target Support Files/Pods-SMLIJKPlayer_Example/Pods-SMLIJKPlayer_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		5A0A799ACD62D09E0C4ABC6F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5A0A799ACD62D09E0C4ABC6F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SMLIJKPlayer_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMLIJKPlayer_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +49,21 @@
 		7EB8543112FBAF6FDEAA6C6A /* Pods_SMLIJKPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMLIJKPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AD7D0B174A42605D85E032 /* Pods_SMLIJKPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMLIJKPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00AEB83645AD28AD878CBFC /* Pods-SMLIJKPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLIJKPlayer_Example.release.xcconfig"; path = "Target Support Files/Pods-SMLIJKPlayer_Example/Pods-SMLIJKPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A29769C2295C30580053A18D /* SMLIJKPlayer_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMLIJKPlayer_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		A29769C3295C30590053A18D /* NameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NameViewController.h; sourceTree = "<group>"; };
+		A29769C4295C30590053A18D /* NameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NameViewController.m; sourceTree = "<group>"; };
+		A29769C7295C43260053A18D /* IJKMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKMoviePlayerViewController.m; sourceTree = "<group>"; };
+		A29769C8295C43260053A18D /* IJKMoviePlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IJKMoviePlayerViewController.xib; sourceTree = "<group>"; };
+		A29769C9295C43260053A18D /* IJKMoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKMoviePlayerViewController.h; sourceTree = "<group>"; };
+		A29769CC295C43510053A18D /* IJKMediaControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKMediaControl.m; sourceTree = "<group>"; };
+		A29769CD295C43510053A18D /* IJKMediaControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKMediaControl.h; sourceTree = "<group>"; };
+		A29769CF295C437E0053A18D /* IJKCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKCommon.h; sourceTree = "<group>"; };
+		A29769D0295C43900053A18D /* IJKDemoHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKDemoHistory.h; sourceTree = "<group>"; };
+		A29769D1295C44020053A18D /* IJKDemoHistoryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJKDemoHistoryItem.h; sourceTree = "<group>"; };
+		A29769D4295C460D0053A18D /* FunctionListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionListVC.swift; sourceTree = "<group>"; };
 		BE69F8E554D9584A6A17B120 /* Pods-SMLIJKPlayer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLIJKPlayer_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SMLIJKPlayer_Tests/Pods-SMLIJKPlayer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F6ECF39F01384C316FBCADAE /* SMLIJKPlayer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SMLIJKPlayer.podspec; path = ../SMLIJKPlayer.podspec; sourceTree = "<group>"; };
-		FA31AF03BF93B1840E248D20 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F6ECF39F01384C316FBCADAE /* SMLIJKPlayer.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SMLIJKPlayer.podspec; path = ../SMLIJKPlayer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FA31AF03BF93B1840E248D20 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +121,22 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				A29769D4295C460D0053A18D /* FunctionListVC.swift */,
+				A29769D0295C43900053A18D /* IJKDemoHistory.h */,
+				A29769D1295C44020053A18D /* IJKDemoHistoryItem.h */,
+				A29769C3295C30590053A18D /* NameViewController.h */,
+				A29769C4295C30590053A18D /* NameViewController.m */,
+				A29769CF295C437E0053A18D /* IJKCommon.h */,
+				A29769CD295C43510053A18D /* IJKMediaControl.h */,
+				A29769CC295C43510053A18D /* IJKMediaControl.m */,
+				A29769C9295C43260053A18D /* IJKMoviePlayerViewController.h */,
+				A29769C7295C43260053A18D /* IJKMoviePlayerViewController.m */,
+				A29769C8295C43260053A18D /* IJKMoviePlayerViewController.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				A29769C2295C30580053A18D /* SMLIJKPlayer_Example-Bridging-Header.h */,
 			);
 			name = "Example for SMLIJKPlayer";
 			path = SMLIJKPlayer;
@@ -156,7 +185,6 @@
 				BE69F8E554D9584A6A17B120 /* Pods-SMLIJKPlayer_Tests.debug.xcconfig */,
 				630390BF01DBFDAB3237432E /* Pods-SMLIJKPlayer_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,7 +199,6 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				E7F69DED661508613462E665 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,10 +240,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						DevelopmentTeam = 7UA78HHHB8;
+						LastSwiftMigration = 1420;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 7UA78HHHB8;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +256,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -248,6 +278,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				A29769CB295C43260053A18D /* IJKMoviePlayerViewController.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,24 +337,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7F69DED661508613462E665 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SMLIJKPlayer_Example/Pods-SMLIJKPlayer_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SMLIJKPlayer/SMLIJKPlayer.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SMLIJKPlayer.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SMLIJKPlayer_Example/Pods-SMLIJKPlayer_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -333,6 +346,10 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				A29769C5295C30590053A18D /* NameViewController.m in Sources */,
+				A29769CA295C43260053A18D /* IJKMoviePlayerViewController.m in Sources */,
+				A29769D5295C460D0053A18D /* FunctionListVC.swift in Sources */,
+				A29769CE295C43520053A18D /* IJKMediaControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -478,11 +495,15 @@
 			baseConfigurationReference = 1AF62C023660447826D7E1E6 /* Pods-SMLIJKPlayer_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7UA78HHHB8;
 				INFOPLIST_FILE = SMLIJKPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SMLIJKPlayer/SMLIJKPlayer_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -493,11 +514,14 @@
 			baseConfigurationReference = A00AEB83645AD28AD878CBFC /* Pods-SMLIJKPlayer_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 7UA78HHHB8;
 				INFOPLIST_FILE = SMLIJKPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SMLIJKPlayer/SMLIJKPlayer_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -507,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE69F8E554D9584A6A17B120 /* Pods-SMLIJKPlayer_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7UA78HHHB8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 630390BF01DBFDAB3237432E /* Pods-SMLIJKPlayer_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7UA78HHHB8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

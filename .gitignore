@@ -13,13 +13,12 @@ build/
 !default.perspectivev3
 xcuserdata/
 *.xccheckout
+profile
 *.moved-aside
 DerivedData
 *.hmap
 *.ipa
 
-# Bundler
-.bundle
 
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
@@ -34,3 +33,10 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 # Pods/
+Pods/
+Pods
+.DS_Store
+Podfile.lock
+/.DS_Store
+Podfile.lock
+/Podfile.lock

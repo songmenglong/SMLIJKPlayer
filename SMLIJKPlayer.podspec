@@ -28,15 +28,26 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/songmenglong/SMLIJKPlayer.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'SMLIJKPlayer/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'SMLIJKPlayer' => ['SMLIJKPlayer/Assets/*.png']
-  # }
+  s.static_framework = true
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'ijkplayer'
+#  s.requires_arc = true
+  
+  s.xcconfig  = {
+#    'FRAMEWORK_SEARCH_PATHS'                => '$(inherited) ${PODS_ROOT}/**',
+#    'LIBRARY_SEARCH_PATHS'                  => '$(inherited) ${PODS_ROOT}/ ${PODS_ROOT}/../',
+#    'ENABLE_BITCODE'                        => 'NO',
+#    'OTHER_LDFLAGS'                         => '$(inherited) -ObjC',
+#    'STRINGS_FILE_OUTPUT_ENCODING'          => 'UTF-8',
+#    'ONLY_ACTIVE_ARCH'                      => 'NO',
+'ONLY_ACTIVE_ARCH' => 'YES',
+
+#    'CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'  => 'NO',
+#    'CLANG_WARN_STRICT_PROTOTYPES'          => 'NO',
+  }
+  
 end
