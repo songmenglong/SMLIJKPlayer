@@ -18,8 +18,6 @@
 #import "IJKMoviePlayerViewController.h"
 #import "IJKMediaControl.h"
 #import "IJKCommon.h"
-//#import "IJKDemoHistory.h"
-#import "IJKDemoHistoryItem.h"
 
 @implementation IJKVideoViewController
 
@@ -81,9 +79,9 @@
 
     self.view.autoresizesSubviews = YES;
     [self.view addSubview:self.player.view];
-    [self.view addSubview:self.mediaControl];
+//    [self.view addSubview:self.mediaControl];
 
-    self.mediaControl.delegatePlayer = self.player;
+//    self.mediaControl.delegatePlayer = self.player;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -1,5 +1,5 @@
 import XCTest
-import SMLIJKPlayer
+//import SMLIJKPlayer
 
 class Tests: XCTestCase {
     

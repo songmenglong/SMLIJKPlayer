@@ -30,6 +30,7 @@
 - (void)endDragMediaSlider;
 - (void)continueDragMediaSlider;
 
+/// 创建协议变量
 @property(nonatomic,weak) id<IJKMediaPlayback> delegatePlayer;
 
 @property(nonatomic,strong) IBOutlet UIView *overlayPanel;

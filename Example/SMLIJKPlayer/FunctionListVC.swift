@@ -17,16 +17,18 @@ class FunctionListVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.cellID)
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
         return tableView
     }()
     
+    private let dataList: [String] = ["OC播放", "Swift播放"]
+            
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         
-        self.setupSubViews()
+//        self.setupSubViews()
     }
     
     /*
@@ -47,30 +49,44 @@ extension FunctionListVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.dataList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.cellID, for: indexPath)
-        cell.textLabel?.text = "准备播放"
+//        cell.textLabel?.text = "准备播放"
+        cell.textLabel?.text = self.dataList[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-                        
-        let previewUrl: String = "http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
-        
-        IJKVideoViewController.present(from: self, withTitle: "准备播放", url: URL(string: previewUrl)) {
-            debugPrint("跳转成功")
+        switch indexPath.row {
+        case 0: // OC播放
+            let previewUrl: String = "http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
+            
+            IJKVideoViewController.present(from: self, withTitle: "准备播放", url: URL(string: previewUrl)) {
+                debugPrint("跳转成功")
+            }
+            break
+        case 1:
+            let ijkRtmpPlayVC = IJkRtmpPlayVC()
+            self.navigationController?.pushViewController(ijkRtmpPlayVC, animated: true)
+            break
+        default:
+            break
         }
-        
+                        
     }
     
 }
 
 extension FunctionListVC {
     
-    private func setupSubViews() -> Void {
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+     
+        
         self.view.addSubview(self.tableView)
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -80,5 +96,9 @@ extension FunctionListVC {
             NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.right, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: self.tableView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: 0),
         ])
+    }
+    
+    private func setupSubViews() -> Void {
+        
     }
 }

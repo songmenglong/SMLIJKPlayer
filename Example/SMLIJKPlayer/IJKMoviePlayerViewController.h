@@ -22,6 +22,7 @@
 @interface IJKVideoViewController : UIViewController
 
 @property(atomic,strong) NSURL *url;
+/// 创建协议变量
 @property(atomic, retain) id<IJKMediaPlayback> player;
 
 - (id)initWithURL:(NSURL *)url;
