@@ -29,6 +29,11 @@ pod repo push SMLSpec SMLIJKPlayer.podspec --allow-warnings
  
 ```
 
+参考SDK
+
+[ijkplayer](https://github.com/iOSDevLog/ijkplayer)
+
+
 ## Author
 
 songmenglong, 983174628@qq.com

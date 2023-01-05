@@ -34,7 +34,13 @@ TODO: Add long description of the pod here.
   
   s.static_framework = true
 
-  s.dependency 'ijkplayer'
+  s.dependency 'ijkplayer' # 直接封装SDK
+#  s.vendored_frameworks = "SMLIJKPlayer/Frameworks/*.framework"
+
+  
+#  s.frameworks  = "AudioToolbox", "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "MobileCoreServices", "OpenGLES", "QuartzCore", "VideoToolbox", "Foundation", "UIKit", "MediaPlayer"
+#  s.libraries   = "bz2", "z", "stdc++"
+  
 #  s.requires_arc = true
   
   s.xcconfig  = {
