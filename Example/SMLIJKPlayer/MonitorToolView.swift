@@ -1,6 +1,6 @@
 //
 //  MonitorToolView.swift
-//  sip_LHZG
+//  SMLIJKPlayer
 //
 //  Created by SongMenglong on 2020/4/1.
 //  Copyright © 2020 gemvary. All rights reserved.

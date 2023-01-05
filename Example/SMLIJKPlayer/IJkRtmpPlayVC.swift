@@ -1,11 +1,12 @@
 //
 //  IJkRtmpPlayVC.swift
-//  Gem_Home
+//  SMLIJKPlayer
 //
 //  Created by SongMengLong on 2022/12/29.
 //
 
 import UIKit
+import IJKMediaFramework
 
 class IJkRtmpPlayVC: UIViewController {
     /// 底层播放画面View
@@ -34,29 +35,17 @@ class IJkRtmpPlayVC: UIViewController {
     private var serverIp: String = String()
     
     private var player: IJKMediaPlayback? // = IJKMediaPlayback()
-    
-    
+        
     /// 页面即将出现
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        self.player?.prepareToPlay()
-        
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6.0) {
-            
-        }
+        self.player?.prepareToPlay()
         
         // 添加loading
 //        ProgressHUD.showMessage(NSLocalizedString("正在加载", comment: ""))
         // 没有播放的状态返回时 延时20s消失hud
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 20.0) {
-            swiftDebug("没有播放的状态返回时 延时20s后HUD消失")
-//            ProgressHUD.hide()
-//            if self.didConnect ==  false {
-//                self.navigationController?.popViewController(animated: true)
-//            }
-        }
+                
     }
     
     /// 页面已经加载
@@ -69,21 +58,25 @@ class IJkRtmpPlayVC: UIViewController {
         // 设置子控件
         self.setupSubViews()
         
-//        self.player?.prepareToPlay()
+        IJKFFMoviePlayerController.setLogReport(true)
+        IJKFFMoviePlayerController.setLogLevel(k_IJK_LOG_DEBUG)
+        IJKFFMoviePlayerController.checkIfFFmpegVersionMatch(true)
+
         
-//        self.player?.play()
+        let options = IJKFFOptions.byDefault()
         
-//        let previewUrl: String = "rtsp://gemvary.51vip.biz:8604/EUrl/EATwX0A?params=eyJwcm90b2NvbCI6InJ0c3AiLCJleHBhbmQiOiJzdHJlYW1mb3JtPXJ0cCIsInVzZXJJZCI6ImFkbWluIiwidCI6MSwiYSI6IjI2ZThkNTUyZTIzNjQ1ZjdhMWJjY2JkMzYwM2JkYTI2fDUyfDB8MXxvcGVuX2FwaSJ9"
-//
-//        let options = IJKFFOptions.byDefault()
-//        self.player = IJKFFMoviePlayerController(contentURL: URL(string: previewUrl), with: options)
-//        self.player?.view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
-//        self.player?.view.frame = self.playView.bounds
-//        self.player?.scalingMode = IJKMPMovieScalingMode.aspectFit
-//        self.player?.shouldAutoplay = true
-////        self.player.shouldAutoplay = YES;
-//
-//        self.playView.addSubview((self.player?.view)!)
+        let previewUrl: URL = URL(string: "http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8")!
+//        let previewUrl = Bundle.main.url(forResource: "230105", withExtension: "mp4")
+//        let previewUrl = Bundle.main.url(forResource: "8904", withExtension: "mp4")
+        self.player = IJKFFMoviePlayerController(contentURL: previewUrl, with: options)
+                
+        self.player?.view.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
+        self.player?.view.frame = self.playView.bounds
+        self.player?.scalingMode = IJKMPMovieScalingMode.aspectFit
+        self.player?.shouldAutoplay = true
+
+        self.playView.autoresizesSubviews = true
+        self.playView.addSubview((self.player?.view)!)
     }
     
     /// 页面即将消失
@@ -92,20 +85,13 @@ class IJkRtmpPlayVC: UIViewController {
         
         self.didDisappear = true
         
-        //DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-            
-        //}
     }
     
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        // 隐藏hud
-//        ProgressHUD.hide()
-        
-//        if let ip = self.device.ip {
-//            self.phoneObtainCameraRequest(ip: ip)
-//        }
+
+        self.player?.shutdown()
     }
     
     /// 判断监控器状态
@@ -120,9 +106,9 @@ extension IJkRtmpPlayVC: MonitorToolDelegate {
         swiftDebug("播放按钮的动作方法", isSelected)
         // 停止播放
         if isSelected {
-            
+            self.player?.play()
         } else {
-            
+            self.player?.pause()
         }
     }
     
@@ -136,76 +122,20 @@ extension IJkRtmpPlayVC: MonitorToolDelegate {
     /// 静音按钮的动作方法
     func muteBtnToolDelegate(_ isSelected: Bool) {
         swiftDebug("静音按钮的动作方法", isSelected)
+        
+        //swiftDebug("当前的音量: ", self.player!.playbackVolume)
+        
+        // 需要保存当前音量
+                
         // 是否要静音
         if isSelected == true {
-            
+            self.player?.playbackVolume = 0
         } else {
-            
+            self.player?.playbackVolume = 0.8
         }
         
     }
 }
-
-/// 代理方法
-//extension IJkRtmpPlayVC: TianDyMonitorDelegate {
-//
-//    /// 回调的处理
-//    func mainCallBackFunc(withCmd cmd: Int32) {
-//        swiftDebug("天地伟业摄像头的代理方法:: ", cmd)
-//        // 根据返回值进行处理
-//        switch cmd {
-//        case 3: // 登录成功
-//            //DispatchQueue.main.async {
-//                // 登录成功
-//                //self.didConnect = true
-//                // 开始播放
-//                self.monitorTool.sdkStartRealplay(self.playView)
-//            //}
-//            break
-//        case 4: // 登录失败
-//            DispatchQueue.main.async {
-//                ProgressHUD.showText("登录失败")
-//            }
-//            break
-//        case 5:
-//            DispatchQueue.main.async {
-//                ProgressHUD.showText("断开摄像头连接")
-//            }
-//        case 13: // 开始播放
-//            break
-//        case 40:
-//            if self.didDisappear == true {
-//                swiftDebug("已经退出当前页面")
-//                return
-//            }
-//            if self.monitorTool.loginFd == -1  {
-//                swiftDebug("当前设备已经登出")
-//                return
-//            }
-//            DispatchQueue.main.async {
-//                //ProgressHUD.showText("接收到第一帧画面")
-//                // 隐藏loading
-//                ProgressHUD.hide()
-//                self.didConnect = true
-//                if let name = self.device.name {
-//                    let filename = TdwyDeviceTool.getImagePath(name: name)
-//                    swiftDebug("准备开始截图 抓取第一帧画面")
-//                    // 抓拍图片
-//                    self.monitorTool.sdkRealplayCapturePic(withFilename: filename)
-//                }
-//            }
-//            break
-//        default:
-//            break
-//        }
-//    }
-//
-//    /// 对讲的动作方法
-//    func mainCallBackFunc(withFd fd: Int32, cmd: Int32) {
-//        swiftDebug("实现对讲的方法")
-//    }
-//}
-
 
 extension IJkRtmpPlayVC {
         
@@ -225,7 +155,7 @@ extension IJkRtmpPlayVC {
         if isFull == true {
             // 全屏模式
             if let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate {
-//                appDelegate.allowRotation = true
+                appDelegate.allowRotation = true
             }
             UIDevice.current.setValue(NSNumber(value: UIDeviceOrientation.portrait.rawValue), forKey: "orientation")
             UIDevice.current.setValue(NSNumber(value: UIDeviceOrientation.landscapeLeft.rawValue), forKey: "orientation")
@@ -243,7 +173,7 @@ extension IJkRtmpPlayVC {
         if isFull == false {
             // 非全屏模式
             if let appDelegate: AppDelegate = UIApplication.shared.delegate as? AppDelegate {
-//                appDelegate.allowRotation = false
+                appDelegate.allowRotation = false
             }
             UIDevice.current.setValue(NSNumber(value: UIDeviceOrientation.landscapeLeft.rawValue), forKey: "orientation")
             UIDevice.current.setValue(NSNumber(value: UIDeviceOrientation.portrait.rawValue), forKey: "orientation")

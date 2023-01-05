@@ -62,9 +62,16 @@ extension FunctionListVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0: // OC播放
-            let previewUrl: String = "http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"
+//            let previewUrl: String = "http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"            
+                        
+//            IJKVideoViewController.present(from: self, withTitle: "准备播放", url: URL(string: previewUrl)) {
+//                debugPrint("跳转成功")
+//            }
             
-            IJKVideoViewController.present(from: self, withTitle: "准备播放", url: URL(string: previewUrl)) {
+            // 获取本地资源
+            let previewUrl = Bundle.main.url(forResource: "230105", withExtension: "mp4")
+            
+            IJKVideoViewController.present(from: self, withTitle: "准备播放", url:  previewUrl) {
                 debugPrint("跳转成功")
             }
             break
@@ -75,7 +82,7 @@ extension FunctionListVC: UITableViewDelegate, UITableViewDataSource {
         default:
             break
         }
-                        
+        
     }
     
 }
@@ -85,7 +92,7 @@ extension FunctionListVC {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-     
+        
         
         self.view.addSubview(self.tableView)
         self.tableView.translatesAutoresizingMaskIntoConstraints = false

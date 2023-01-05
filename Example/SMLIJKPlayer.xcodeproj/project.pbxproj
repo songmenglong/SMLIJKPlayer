@@ -14,9 +14,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		A229924129665CF200628CE9 /* 230105.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = A229924029665CF200628CE9 /* 230105.MP4 */; };
+		A229924129665CF200628CE9 /* 230105.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A229924029665CF200628CE9 /* 230105.mp4 */; };
 		A229924329665EC600628CE9 /* IJkRtmpPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229924229665EC600628CE9 /* IJkRtmpPlayVC.swift */; };
 		A229924529665EF000628CE9 /* MonitorToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A229924429665EF000628CE9 /* MonitorToolView.swift */; };
+		A22992492966CAE900628CE9 /* 8904.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A22992482966CAE900628CE9 /* 8904.mp4 */; };
+		A229924C2966CCCC00628CE9 /* 12901.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A229924B2966CCCC00628CE9 /* 12901.mp4 */; };
 		A29769CA295C43260053A18D /* IJKMoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29769C7295C43260053A18D /* IJKMoviePlayerViewController.m */; };
 		A29769CB295C43260053A18D /* IJKMoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29769C8295C43260053A18D /* IJKMoviePlayerViewController.xib */; };
 		A29769CE295C43520053A18D /* IJKMediaControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A29769CC295C43510053A18D /* IJKMediaControl.m */; };
@@ -49,9 +51,11 @@
 		7EB8543112FBAF6FDEAA6C6A /* Pods_SMLIJKPlayer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMLIJKPlayer_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AD7D0B174A42605D85E032 /* Pods_SMLIJKPlayer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMLIJKPlayer_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00AEB83645AD28AD878CBFC /* Pods-SMLIJKPlayer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMLIJKPlayer_Example.release.xcconfig"; path = "Target Support Files/Pods-SMLIJKPlayer_Example/Pods-SMLIJKPlayer_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A229924029665CF200628CE9 /* 230105.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 230105.MP4; sourceTree = "<group>"; };
+		A229924029665CF200628CE9 /* 230105.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 230105.mp4; sourceTree = "<group>"; };
 		A229924229665EC600628CE9 /* IJkRtmpPlayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IJkRtmpPlayVC.swift; sourceTree = "<group>"; };
 		A229924429665EF000628CE9 /* MonitorToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorToolView.swift; sourceTree = "<group>"; };
+		A22992482966CAE900628CE9 /* 8904.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8904.mp4; sourceTree = "<group>"; };
+		A229924B2966CCCC00628CE9 /* 12901.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 12901.mp4; sourceTree = "<group>"; };
 		A29769C2295C30580053A18D /* SMLIJKPlayer_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SMLIJKPlayer_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		A29769C7295C43260053A18D /* IJKMoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKMoviePlayerViewController.m; sourceTree = "<group>"; };
 		A29769C8295C43260053A18D /* IJKMoviePlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IJKMoviePlayerViewController.xib; sourceTree = "<group>"; };
@@ -122,12 +126,12 @@
 				A29769D4295C460D0053A18D /* FunctionListVC.swift */,
 				A229924229665EC600628CE9 /* IJkRtmpPlayVC.swift */,
 				A229924429665EF000628CE9 /* MonitorToolView.swift */,
+				A229924D2966CCD300628CE9 /* mp4 */,
 				A29769CF295C437E0053A18D /* IJKCommon.h */,
 				A29769CD295C43510053A18D /* IJKMediaControl.h */,
 				A29769CC295C43510053A18D /* IJKMediaControl.m */,
 				A29769C9295C43260053A18D /* IJKMoviePlayerViewController.h */,
 				A29769C7295C43260053A18D /* IJKMoviePlayerViewController.m */,
-				A2299246296661FF00628CE9 /* resources */,
 				A29769C8295C43260053A18D /* IJKMoviePlayerViewController.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -185,12 +189,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A2299246296661FF00628CE9 /* resources */ = {
+		A229924D2966CCD300628CE9 /* mp4 */ = {
 			isa = PBXGroup;
 			children = (
-				A229924029665CF200628CE9 /* 230105.MP4 */,
+				A22992482966CAE900628CE9 /* 8904.mp4 */,
+				A229924029665CF200628CE9 /* 230105.mp4 */,
+				A229924B2966CCCC00628CE9 /* 12901.mp4 */,
 			);
-			name = resources;
+			path = mp4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,10 +287,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A229924C2966CCCC00628CE9 /* 12901.mp4 in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				A22992492966CAE900628CE9 /* 8904.mp4 in Resources */,
 				A29769CB295C43260053A18D /* IJKMoviePlayerViewController.xib in Resources */,
-				A229924129665CF200628CE9 /* 230105.MP4 in Resources */,
+				A229924129665CF200628CE9 /* 230105.mp4 in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
