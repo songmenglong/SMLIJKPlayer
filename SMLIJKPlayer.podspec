@@ -43,6 +43,11 @@ TODO: Add long description of the pod here.
   
   s.requires_arc = true
   
+  s.xcconfig = {
+    'ONLY_ACTIVE_ARCH' => 'YES',
+#    'ENABLE_BITCODE' => 'NO'
+  }
+  
 #  s.xcconfig  = {
 ##    'FRAMEWORK_SEARCH_PATHS'                => '$(inherited) ${PODS_ROOT}/**',
 ##    'LIBRARY_SEARCH_PATHS'                  => '$(inherited) ${PODS_ROOT}/ ${PODS_ROOT}/../',
