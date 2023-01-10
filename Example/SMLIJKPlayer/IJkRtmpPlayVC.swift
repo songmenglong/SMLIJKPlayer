@@ -64,9 +64,10 @@ class IJkRtmpPlayVC: UIViewController {
 
         
         let options = IJKFFOptions.byDefault()
+       
         
-        let previewUrl: URL = URL(string: "http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8")!
-//        let previewUrl = Bundle.main.url(forResource: "230105", withExtension: "mp4")
+//        let previewUrl: URL = URL(string: "http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8")!
+        let previewUrl = Bundle.main.url(forResource: "230105", withExtension: "mp4")
 //        let previewUrl = Bundle.main.url(forResource: "8904", withExtension: "mp4")
         self.player = IJKFFMoviePlayerController(contentURL: previewUrl, with: options)
                 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SMLIJKPlayer'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of SMLIJKPlayer.'
 
 # This description is used to generate tags and improve search results.
@@ -30,30 +30,30 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SMLIJKPlayer/Classes/**/*'
+#  s.source_files = 'SMLIJKPlayer/Classes/**/*'
   
-  s.static_framework = true
+#  s.static_framework = true
 
-  s.dependency 'ijkplayer' # 直接封装SDK
-#  s.vendored_frameworks = "SMLIJKPlayer/Frameworks/*.framework"
+#  s.dependency 'ijkplayer' # 直接封装SDK
+  s.vendored_frameworks = "SMLIJKPlayer/Frameworks/IJKMediaFramework.framework"
 
   
 #  s.frameworks  = "AudioToolbox", "AVFoundation", "CoreGraphics", "CoreMedia", "CoreVideo", "MobileCoreServices", "OpenGLES", "QuartzCore", "VideoToolbox", "Foundation", "UIKit", "MediaPlayer"
-#  s.libraries   = "bz2", "z", "stdc++"
+  s.libraries   = "bz2", "z", "stdc++"
   
-#  s.requires_arc = true
+  s.requires_arc = true
   
-  s.xcconfig  = {
-#    'FRAMEWORK_SEARCH_PATHS'                => '$(inherited) ${PODS_ROOT}/**',
-#    'LIBRARY_SEARCH_PATHS'                  => '$(inherited) ${PODS_ROOT}/ ${PODS_ROOT}/../',
-#    'ENABLE_BITCODE'                        => 'NO',
-#    'OTHER_LDFLAGS'                         => '$(inherited) -ObjC',
-#    'STRINGS_FILE_OUTPUT_ENCODING'          => 'UTF-8',
-#    'ONLY_ACTIVE_ARCH'                      => 'NO',
-'ONLY_ACTIVE_ARCH' => 'YES',
-
-#    'CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'  => 'NO',
-#    'CLANG_WARN_STRICT_PROTOTYPES'          => 'NO',
-  }
+#  s.xcconfig  = {
+##    'FRAMEWORK_SEARCH_PATHS'                => '$(inherited) ${PODS_ROOT}/**',
+##    'LIBRARY_SEARCH_PATHS'                  => '$(inherited) ${PODS_ROOT}/ ${PODS_ROOT}/../',
+##    'ENABLE_BITCODE'                        => 'NO',
+##    'OTHER_LDFLAGS'                         => '$(inherited) -ObjC',
+##    'STRINGS_FILE_OUTPUT_ENCODING'          => 'UTF-8',
+##    'ONLY_ACTIVE_ARCH'                      => 'NO',
+##'ONLY_ACTIVE_ARCH' => 'YES',
+#
+##    'CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'  => 'NO',
+##    'CLANG_WARN_STRICT_PROTOTYPES'          => 'NO',
+#  }
   
 end

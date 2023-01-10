@@ -17,7 +17,24 @@ SMLIJKPlayer is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/songmenglong/SMLSpec.git'
+
 pod 'SMLIJKPlayer'
+```
+
+```
+git add.
+
+git status
+
+git commit -m "第一次提交"
+
+git tag -a '0.1.0' -m "提交代码测试"
+
+git push -f origin master
+
+git push --tags
 
 pod lib lint --verbose --allow-warnings --no-clean
 
@@ -26,8 +43,8 @@ pod spec lint --sources='https://github.com/songmenglong/SMLSpec.git,https://git
 pod repo add SMLSpec https://github.com/songmenglong/SMLSpec.git
 
 pod repo push SMLSpec SMLIJKPlayer.podspec --allow-warnings
- 
 ```
+
 
 参考SDK
 
